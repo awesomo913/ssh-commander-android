@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOSS MODE"
+            android:textColor="@color/red"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose a scenario to tackle"
+            android:textColor="@color/fg2"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Scenario radio group - populated programmatically -->
+        <RadioGroup
+            android:id="@+id/rgBossScenario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnBossBack"
+                style="@style/Widget.SshCommander.Button.Action"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_back"
+                android:layout_marginEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnBossStart"
+                style="@style/Widget.SshCommander.Button.Boss"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/btn_start" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

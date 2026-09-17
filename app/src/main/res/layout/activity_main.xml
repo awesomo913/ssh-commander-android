@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  activity_main.xml — single-activity host
+  All "screens" are FrameLayout containers shown/hidden by MainActivity.
+  Order in the z-stack: main menu is top when visible; sub-screens slide in front.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <!-- ── SCREEN: Main Menu ───────────────────────────────────────────── -->
+    <include
+        layout="@layout/screen_menu"
+        android:id="@+id/screenMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <!-- ── SCREEN: Learn Setup ────────────────────────────────────────── -->
+    <include
+        layout="@layout/screen_learn_setup"
+        android:id="@+id/screenLearnSetup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- ── SCREEN: Challenge Setup ────────────────────────────────────── -->
+    <include
+        layout="@layout/screen_challenge_setup"
+        android:id="@+id/screenChallengeSetup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- ── SCREEN: Boss Setup ─────────────────────────────────────────── -->
+    <include
+        layout="@layout/screen_boss_setup"
+        android:id="@+id/screenBossSetup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- ── SCREEN: Gameplay (shared by all three modes) ───────────────── -->
+    <include
+        layout="@layout/screen_gameplay"
+        android:id="@+id/screenGameplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- ── SCREEN: Results ────────────────────────────────────────────── -->
+    <include
+        layout="@layout/screen_result"
+        android:id="@+id/screenResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

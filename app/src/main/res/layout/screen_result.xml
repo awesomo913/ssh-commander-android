@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="32dp">
+
+        <!-- Result title -->
+        <TextView
+            android:id="@+id/tvResultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MISSION COMPLETE"
+            android:textColor="@color/green"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Mode subtitle -->
+        <TextView
+            android:id="@+id/tvResultMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEARN MODE"
+            android:textColor="@color/fg2"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:textAllCaps="true"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Stats card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/bg2"
+            android:padding="20dp"
+            android:layout_marginBottom="32dp">
+
+            <!-- Score row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Score"
+                    android:textColor="@color/fg2"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+                <TextView
+                    android:id="@+id/tvResultScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/green"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+
+            <!-- Correct row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Correct"
+                    android:textColor="@color/fg2"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+                <TextView
+                    android:id="@+id/tvResultCorrect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/green"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+
+            <!-- Wrong row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wrong"
+                    android:textColor="@color/fg2"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+                <TextView
+                    android:id="@+id/tvResultWrong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+
+            <!-- Accuracy row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Accuracy"
+                    android:textColor="@color/fg2"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+                <TextView
+                    android:id="@+id/tvResultAccuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+
+            <!-- Hints row (Boss mode) -->
+            <LinearLayout
+                android:id="@+id/rowResultHints"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hints Used"
+                    android:textColor="@color/fg2"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+                <TextView
+                    android:id="@+id/tvResultHints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/yellow"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Play Again -->
+        <Button
+            android:id="@+id/btnPlayAgain"
+            style="@style/Widget.SshCommander.Button.Submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_play_again"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Back to Menu -->
+        <Button
+            android:id="@+id/btnResultMenu"
+            style="@style/Widget.SshCommander.Button.Action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MAIN MENU" />
+
+    </LinearLayout>
+</ScrollView>

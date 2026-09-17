@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  screen_gameplay.xml
+  Shared by Learn, Challenge, and Boss modes.
+  Sections shown/hidden by MainActivity depending on active mode.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+
+    <!-- ── Header bar ─────────────────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:background="@color/bg2"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Left: card counter or scenario title -->
+        <TextView
+            android:id="@+id/tvCardCounter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Card 1 / 12"
+            android:textColor="@color/fg2"
+            android:textSize="13sp"
+            android:fontFamily="monospace" />
+
+        <!-- Right side: score, streak, lives -->
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 pts"
+            android:textColor="@color/green"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:id="@+id/tvStreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔥0"
+            android:textColor="@color/yellow"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Lives: only shown in Challenge mode -->
+        <TextView
+            android:id="@+id/tvLives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❤❤❤"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- ── Scrollable content area ───────────────────────────────────── -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Category badge -->
+            <TextView
+                android:id="@+id/tvCategoryBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="connect"
+                android:textColor="@color/blue"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:textAllCaps="true"
+                android:letterSpacing="0.12"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Boss story paragraph (shown only on step 1 of boss mode) -->
+            <TextView
+                android:id="@+id/tvBossStory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/fg2"
+                android:textSize="13sp"
+                android:fontFamily="monospace"
+                android:background="@color/bg3"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone" />
+
+            <!-- Prompt box: what the command does -->
+            <LinearLayout
+                android:id="@+id/promptBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg2"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvPromptLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WHAT DOES THIS COMMAND DO?"
+                    android:textColor="@color/fg2"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvPrompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Connect to a remote host as a given user over SSH"
+                    android:textColor="@color/fg"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:lineSpacingMultiplier="1.3" />
+            </LinearLayout>
+
+            <!-- Input field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAnswer"
+                style="@style/SshTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_input"
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundColor="@color/bg3"
+                app:boxStrokeColor="@color/border"
+                app:hintTextColor="@color/fg2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fg"
+                    android:textSize="15sp"
+                    android:fontFamily="monospace"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Feedback label -->
+            <TextView
+                android:id="@+id/tvFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/green"
+                android:textSize="13sp"
+                android:fontFamily="monospace"
+                android:minHeight="20dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Hint text (Boss mode) -->
+            <TextView
+                android:id="@+id/tvHintText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/yellow"
+                android:textSize="13sp"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone" />
+
+            <!-- Button row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Submit is always visible -->
+                <Button
+                    android:id="@+id/btnSubmit"
+                    style="@style/Widget.SshCommander.Button.Submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/btn_submit"
+                    android:layout_marginEnd="8dp" />
+
+                <!-- Skip (Learn only) -->
+                <Button
+                    android:id="@+id/btnSkip"
+                    style="@style/Widget.SshCommander.Button.Action"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_skip"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone" />
+
+                <!-- Hint (Boss only) -->
+                <Button
+                    android:id="@+id/btnHint"
+                    style="@style/Widget.SshCommander.Button.Action"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_hint"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone" />
+
+                <!-- Quit (all modes) -->
+                <Button
+                    android:id="@+id/btnQuit"
+                    style="@style/Widget.SshCommander.Button.Action"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_quit" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

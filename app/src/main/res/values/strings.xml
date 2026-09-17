@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SSH Commander</string>
+    <string name="title_main">SSH COMMANDER</string>
+    <string name="subtitle_main">Master the terminal. Own the shell.</string>
+    <string name="btn_learn">LEARN</string>
+    <string name="btn_challenge">CHALLENGE</string>
+    <string name="btn_boss">BOSS MODE</string>
+    <string name="btn_start">START</string>
+    <string name="btn_back">BACK</string>
+    <string name="btn_submit">SUBMIT</string>
+    <string name="btn_skip">SKIP</string>
+    <string name="btn_quit">QUIT</string>
+    <string name="btn_hint">HINT</string>
+    <string name="btn_play_again">PLAY AGAIN</string>
+    <string name="label_category">Category</string>
+    <string name="label_level">Level</string>
+    <string name="label_lives">Lives</string>
+    <string name="label_score">Score</string>
+    <string name="label_streak">Streak</string>
+    <string name="label_correct">Correct</string>
+    <string name="label_wrong">Wrong</string>
+    <string name="label_accuracy">Accuracy</string>
+    <string name="label_hints">Hints Used</string>
+    <string name="label_time">Time</string>
+    <string name="hint_input">Type the command…</string>
+    <string name="all_categories">All Categories</string>
+    <string name="all_levels">All Levels</string>
+    <string name="level_1">Level 1 — Beginner</string>
+    <string name="level_2">Level 2 — Intermediate</string>
+    <string name="level_3">Level 3 — Advanced</string>
+    <string name="lives_1">1 Life</string>
+    <string name="lives_3">3 Lives</string>
+    <string name="lives_5">5 Lives</string>
+    <string name="result_complete">MISSION COMPLETE</string>
+    <string name="result_defeated">DEFEATED</string>
+    <string name="result_partial">INCOMPLETE</string>
+    <string name="boss_defeated">BOSS DEFEATED</string>
+    <string name="commands_count">%d commands loaded</string>
+</resources>

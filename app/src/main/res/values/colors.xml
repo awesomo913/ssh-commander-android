@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main palette from design spec -->
+    <color name="bg">#0d1117</color>
+    <color name="bg2">#161b22</color>
+    <color name="bg3">#21262d</color>
+    <color name="fg">#e6edf3</color>
+    <color name="fg2">#8b949e</color>
+    <color name="green">#3fb950</color>
+    <color name="red">#f85149</color>
+    <color name="yellow">#d29922</color>
+    <color name="blue">#58a6ff</color>
+    <color name="purple">#bc8cff</color>
+    <color name="border">#30363d</color>
+    <!-- Transparent black overlay for dialogs -->
+    <color name="scrim">#CC000000</color>
+</resources>

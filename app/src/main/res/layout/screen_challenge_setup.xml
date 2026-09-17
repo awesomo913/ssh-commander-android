@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHALLENGE MODE"
+            android:textColor="@color/yellow"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Lives selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lives"
+            android:textColor="@color/fg2"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rgChallengeLives"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/rbLives1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="1 Life — Hardcore"
+                android:textColor="@color/red"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/yellow"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbLives3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="3 Lives — Standard"
+                android:textColor="@color/fg"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/yellow"
+                android:checked="true"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbLives5"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="5 Lives — Easy"
+                android:textColor="@color/fg"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/yellow"
+                android:background="@color/bg2"
+                android:paddingStart="16dp" />
+        </RadioGroup>
+
+        <!-- Category filter -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textColor="@color/fg2"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rgChallengeCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp">
+
+            <RadioButton
+                android:id="@+id/rbChallCatAll"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="All Categories"
+                android:textColor="@color/fg"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/yellow"
+                android:checked="true"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbChallCatConnect"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="connect"
+                android:textColor="@color/blue"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/yellow"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbChallCatFiles"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="files"
+                android:textColor="@color/green"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/yellow"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbChallCatTunnels"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="tunnels"
+                android:textColor="@color/purple"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/yellow"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbChallCatManage"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="manage"
+                android:textColor="@color/yellow"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/yellow"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbChallCatHarden"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="harden"
+                android:textColor="@color/red"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/yellow"
+                android:background="@color/bg2"
+                android:paddingStart="16dp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnChallengeBack"
+                style="@style/Widget.SshCommander.Button.Action"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_back"
+                android:layout_marginEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnChallengeStart"
+                style="@style/Widget.SshCommander.Button.Challenge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/btn_start" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

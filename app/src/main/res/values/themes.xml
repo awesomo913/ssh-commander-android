@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SshCommander" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/bg2</item>
+        <item name="colorOnPrimary">@color/bg</item>
+        <item name="colorSurface">@color/bg2</item>
+        <item name="colorOnSurface">@color/fg</item>
+        <item name="android:textColor">@color/fg</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+    </style>
+
+    <!-- Solid mode buttons -->
+    <style name="Widget.SshCommander.Button.Learn" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textColor">@color/bg</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+
+    <style name="Widget.SshCommander.Button.Challenge" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/yellow</item>
+        <item name="android:textColor">@color/bg</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+
+    <style name="Widget.SshCommander.Button.Boss" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/red</item>
+        <item name="android:textColor">@color/fg</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+
+    <style name="Widget.SshCommander.Button.Action" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/fg</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="strokeColor">@color/border</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+
+    <style name="Widget.SshCommander.Button.Submit" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textColor">@color/bg</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+
+    <style name="SshTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/bg3</item>
+        <item name="boxStrokeColor">@color/border</item>
+        <item name="hintTextColor">@color/fg2</item>
+        <item name="android:textColorHint">@color/fg2</item>
+    </style>
+</resources>

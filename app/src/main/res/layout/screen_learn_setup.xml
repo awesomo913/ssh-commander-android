@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEARN MODE"
+            android:textColor="@color/green"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Category section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textColor="@color/fg2"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rgLearnCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/rbLearnCatAll"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="All Categories"
+                android:textColor="@color/fg"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/green"
+                android:checked="true"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbLearnCatConnect"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="connect"
+                android:textColor="@color/blue"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/blue"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbLearnCatFiles"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="files"
+                android:textColor="@color/green"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/green"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbLearnCatTunnels"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="tunnels"
+                android:textColor="@color/purple"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/purple"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbLearnCatManage"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="manage"
+                android:textColor="@color/yellow"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/yellow"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbLearnCatHarden"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="harden"
+                android:textColor="@color/red"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/red"
+                android:background="@color/bg2"
+                android:paddingStart="16dp" />
+        </RadioGroup>
+
+        <!-- Level section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level"
+            android:textColor="@color/fg2"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rgLearnLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp">
+
+            <RadioButton
+                android:id="@+id/rbLearnLvlAll"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="All Levels"
+                android:textColor="@color/fg"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/green"
+                android:checked="true"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbLearnLvl1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Level 1 — Beginner"
+                android:textColor="@color/fg"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/green"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbLearnLvl2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Level 2 — Intermediate"
+                android:textColor="@color/fg"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/green"
+                android:background="@color/bg2"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="2dp" />
+
+            <RadioButton
+                android:id="@+id/rbLearnLvl3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Level 3 — Advanced"
+                android:textColor="@color/fg"
+                android:fontFamily="monospace"
+                android:buttonTint="@color/green"
+                android:background="@color/bg2"
+                android:paddingStart="16dp" />
+        </RadioGroup>
+
+        <!-- Buttons row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLearnBack"
+                style="@style/Widget.SshCommander.Button.Action"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_back"
+                android:layout_marginEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnLearnStart"
+                style="@style/Widget.SshCommander.Button.Submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/btn_start" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
