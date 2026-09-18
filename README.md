@@ -24,7 +24,7 @@ Two separate, unconsolidated implementations: Python + Kivy (`main.py`, `engine.
 # Kivy build:
 python main.py
 ```
-The Kotlin build is a standard Gradle Android project under `app/` (open in Android Studio or build with `gradlew`).
+The Kotlin sources are under `app/`, but no `gradlew`, `build.gradle`, or `settings.gradle` are committed — it's source-only as published and won't build as-is. To build it, create a new Android Studio project and drop these sources in, or add the Gradle build files yourself.
 
 ## Status
 Paused before completion — two parallel, unmerged implementations (Python/Kivy and native Kotlin); the concept was shelved rather than finished. Last touched 2026-06-17.
